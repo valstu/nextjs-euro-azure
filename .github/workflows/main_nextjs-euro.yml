@@ -28,7 +28,7 @@ jobs:
           npm run test --if-present
 
       - name: Zip artifact for deployment
-        run: zip -r --symlinks release.zip * .next -x *.git*
+        run: zip -r --symlinks release.zip * .next
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
