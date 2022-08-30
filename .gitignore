@@ -14,6 +14,8 @@
 
 # production
 /build
+/az_functions_server/*.js
+/az_functions_static_server/*.js
 
 # misc
 .DS_Store
