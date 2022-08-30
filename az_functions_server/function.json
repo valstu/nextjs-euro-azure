@@ -16,5 +16,5 @@
       "name": "res"
     }
   ],
-  "scriptFile": "../dist/basic-nextjs-server/index.js"
+  "scriptFile": "./index.js"
 }

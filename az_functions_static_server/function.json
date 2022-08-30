@@ -17,5 +17,5 @@
       "name": "$return"
     }
   ],
-  "scriptFile": "../dist/basic-serve-static-file/index.js"
+  "scriptFile": "./index.js"
 }
