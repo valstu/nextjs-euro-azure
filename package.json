@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && tsc az_functions_server/*.ts az_functions_static_server/*.ts --allowSyntheticDefaultImports",
+    "build": "next build",
     "next:start": "next start",
     "start": "func start",
     "lint": "next lint"
