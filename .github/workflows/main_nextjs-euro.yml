@@ -58,6 +58,8 @@ jobs:
       #   run: |
       #     unzip -q release.zip
       #     rm release.zip
+      - uses: actions/checkout@v2
+
       - name: Build app using Oryx v2 version
         uses: Azure/appservice-build@v2
         with:
