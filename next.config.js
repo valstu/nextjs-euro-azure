@@ -2,8 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  basePaths: "/nextjsserver",
-  // output: "standalone",
+  output: "standalone",
 };
 
 module.exports = nextConfig;
