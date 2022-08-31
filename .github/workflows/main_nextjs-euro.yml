@@ -25,8 +25,6 @@ jobs:
         yarn
         yarn build
       # npm run test --if-present
-    - name: Setup upterm session
-      uses: lhotari/action-upterm@v1
 
     - name: Copy Public & Static Folders
       run: |
@@ -34,7 +32,7 @@ jobs:
         cp -r ./.next/static .next/standalone
 
     - name: Zip artifact for deployment
-      run: zip -r --symlinks .next/standalone 
+      run: zip -r --symlinks ./.next/standalone 
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
