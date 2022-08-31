@@ -31,8 +31,11 @@ jobs:
         cp -r public .next/standalone
         cp -r ./.next/static .next/standalone
 
+    - name: Setup upterm session
+      uses: lhotari/action-upterm@v1
+      
     - name: Zip artifact for deployment
-      run: zip -r --symlinks ./.next/standalone 
+      run: zip -r --symlinks .next/standalone 
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
