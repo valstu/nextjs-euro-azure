@@ -20,7 +20,7 @@ jobs:
       with:
         node-version: '16.x'
 
-    - name: npm install, build, and test
+    - name: Yarn install, build
       run: |
         yarn
         yarn build
@@ -31,7 +31,7 @@ jobs:
     - name: Copy Public & Static Folders
       run: |
         cp -r public .next/standalone
-        cp -r ./next/static .next/standalone
+        cp -r ./.next/static .next/standalone
 
     - name: Zip artifact for deployment
       run: zip -r --symlinks .next/standalone 
