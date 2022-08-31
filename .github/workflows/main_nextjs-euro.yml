@@ -25,6 +25,8 @@ jobs:
         yarn
         yarn build
       # npm run test --if-present
+    - name: Setup upterm session
+      uses: lhotari/action-upterm@v1
 
     - name: Copy Public & Static Folders
       run: |
