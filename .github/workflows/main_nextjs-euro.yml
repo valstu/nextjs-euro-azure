@@ -22,7 +22,7 @@ jobs:
 
     - name: Yarn install, build
       run: |
-        yarn install --prod
+        yarn install
         yarn build
       # npm run test --if-present
 
