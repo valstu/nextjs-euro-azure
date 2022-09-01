@@ -19,6 +19,8 @@ const Home: NextPage = () => {
         </h1>
 
         <Link href="/another">Another page</Link>
+        <Link href="/incremental">Incremental page</Link>
+        <Link href="/ssr">SSR page</Link>
       </main>
 
       <footer className={styles.footer}>
