@@ -22,7 +22,7 @@ jobs:
 
     - name: Yarn install, build
       run: |
-        yarn
+        yarn install --prod
         yarn build
       # npm run test --if-present
 
@@ -33,10 +33,10 @@ jobs:
 
     # - name: Setup upterm session
     #   uses: lhotari/action-upterm@v1
-      
+# zip -r --symlinks release.zip . -x node_modules/\* *.git*
     - name: Zip artifact for deployment
       run: |
-        zip -r --symlinks release.zip . -x node_modules/\* *.git*
+        zip -r --symlinks release.zip . -x *.git*
       
 
     - name: Upload artifact for deployment job
@@ -59,9 +59,9 @@ jobs:
       with:
         name: node-app
 
-    - name: Unzip artifact for deployment
-      run: |
-        unzip -q release.zip
+    # - name: Unzip artifact for deployment
+    #   run: |
+    #     unzip -q release.zip
 
     # - name: 'Deploy to Azure Web App'
     #   id: deploy-to-webapp
