@@ -77,4 +77,4 @@ jobs:
         app-name: 'nextjs-euro'
         slot-name: 'Production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_2ae5c28683f7424d86a9e75af794ed88 }}
-        package: ./.next/standalone
+        package: .
