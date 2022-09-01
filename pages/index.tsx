@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { Text } from "@mantine/core";
 import styles from "../styles/Home.module.css";
 
 const Home: NextPage = () => {
@@ -17,7 +18,7 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Wow, Welcome to <a href="https://nextjs.org">Next.js in Azure!!!</a>
         </h1>
-
+        <Text>This is just a playground for me</Text>
         <Link href="/another">Another page</Link>
         <Link href="/incremental">Incremental page</Link>
         <Link href="/ssr">SSR page</Link>

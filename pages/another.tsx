@@ -18,7 +18,7 @@ const Another = () => {
         >
           <Image
             alt="hello"
-            src={`https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2129&q=80`}
+            src={`https://images.unsplash.com/photo-1522747309538-8314b308352f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80`}
             sizes="(min-width: 75em) 33vw,
             (min-width: 48em) 50vw,
             100vw"

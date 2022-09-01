@@ -4,6 +4,10 @@ import type { GetStaticProps } from "next";
 const Incremental = (props: any) => {
   return (
     <>
+      <Text>
+        This timestamp should update on every request since it is server side
+        rendered
+      </Text>
       <Text>Time is {props.time}</Text>
     </>
   );

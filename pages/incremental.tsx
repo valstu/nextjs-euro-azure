@@ -4,6 +4,10 @@ import type { GetStaticProps } from "next";
 const Incremental = (props: any) => {
   return (
     <>
+      <Text>
+        This timestamp should update on every 10 seconds it is using incremental
+        static regeneration
+      </Text>
       <Text>Time is {props.time}</Text>
     </>
   );
