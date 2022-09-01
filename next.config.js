@@ -11,6 +11,7 @@ const nextConfig = {
     ? "https://nextjs-euro-dkh8g6eybgfsgpdd.z01.azurefd.net/"
     : undefined,
   images: {
+    path: "https://nextjs-euro-dkh8g6eybgfsgpdd.z01.azurefd.net/_next/image",
     domains: ["images.unsplash.com"],
   },
 };
