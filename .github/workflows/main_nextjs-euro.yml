@@ -36,15 +36,17 @@ jobs:
     #   uses: lhotari/action-upterm@v1
 # zip -r --symlinks release.zip . -x node_modules/\* *.git*
     - name: Zip artifact for deployment
-      working-directory: ./.next/standalone
       run: |
+        cd ./.next/standalone
         zip -r --symlinks release.zip . -x *.git*
+        cd ..
+        cd ..
+        mv ./.next/release.zip ./
       
 
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
       with:
-        working-directory: ./.next/standalone
         name: node-app
         path: release.zip
 
