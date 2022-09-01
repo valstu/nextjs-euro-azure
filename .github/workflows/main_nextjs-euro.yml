@@ -35,7 +35,9 @@ jobs:
     #   uses: lhotari/action-upterm@v1
       
     - name: Zip artifact for deployment
-      run: zip -r --symlinks release.zip ./.next/standalone
+      run: |
+        cd ./.next/standalone
+        zip -r --symlinks release.zip * 
       
 
     - name: Upload artifact for deployment job
