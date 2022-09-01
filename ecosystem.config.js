@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "nextjs-euro",
       script: "npm",
-      args: "start:azure",
+      args: "run start:azure",
       watch: false,
       autorestart: true,
     },
