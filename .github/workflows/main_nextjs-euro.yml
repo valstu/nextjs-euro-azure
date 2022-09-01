@@ -28,8 +28,8 @@ jobs:
 
     - name: Copy Public & Static Folders
       run: |
-        cp -r public .next/standalone
-        cp -r ./.next/static .next/standalone
+        cp -a public .next/standalone
+        cp -a ./.next/static ./.next/standalone
         cp ecosystem.config.js .next/standalone
 
     # - name: Setup upterm session
