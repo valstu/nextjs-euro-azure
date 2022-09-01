@@ -26,17 +26,19 @@ jobs:
         yarn build
       # npm run test --if-present
 
-    # - name: Copy Public & Static Folders
-    #   run: |
-    #     cp -r public .next/standalone
-    #     cp -r ./.next/static .next/standalone
+    - name: Copy Public & Static Folders
+      run: |
+        cp -r public .next/standalone
+        cp -r ./.next/static .next/standalone
+        cp ecosystem.config.js .next/standalone
 
     # - name: Setup upterm session
     #   uses: lhotari/action-upterm@v1
 # zip -r --symlinks release.zip . -x node_modules/\* *.git*
     - name: Zip artifact for deployment
+      working-directory: ./.next/standalone
       run: |
-        zip -r --symlinks release.zip . -x *.git*
+        zip -q -r --symlinks release.zip . -x *.git*
       
 
     - name: Upload artifact for deployment job
@@ -63,14 +65,6 @@ jobs:
       run: |
         unzip -q release.zip
 
-    # - name: 'Deploy to Azure Web App'
-    #   id: deploy-to-webapp
-    #   uses: azure/webapps-deploy@v2
-    #   with:
-    #     app-name: 'nextjs-euro'
-    #     slot-name: 'Production'
-    #     publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E062C14C7BE140DCB763AEFE26294780 }}
-    #     package: .
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
